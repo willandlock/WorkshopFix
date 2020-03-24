@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-stat-filtere',
-  templateUrl: './stat-filtere.component.html',
-  styleUrls: ['./stat-filtere.component.css']
+  selector: 'app-stat-filters',
+  templateUrl: './stat-filters.component.html',
+  styleUrls: ['./stat-filters.component.css']
 })
-export class StatFilterComponent implements OnInit {
+export class StatFiltersComponent implements OnInit {
 
   constructor() { }
 
