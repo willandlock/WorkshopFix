@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-const videos = [
+import { Video } from '../video.type';
+
+const videos: Video[] = [
   {
     "title": "Angular Observable Data Flow",
     "author": "Kyle Cordes",
@@ -186,7 +188,8 @@ const videos = [
       }
     ]
   }
-]
+];
+
 
 @Component({
   selector: 'app-video-list',
@@ -194,11 +197,17 @@ const videos = [
   styleUrls: ['./video-list.component.css']
 })
 export class VideoListComponent implements OnInit {
-  videos = videos;
-  
+
+  videos: Video[] = videos;
+  selectedVideo: Video;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  videoClicked(video: Video) {
+    this.selectedVideo = video;
   }
 
 }
