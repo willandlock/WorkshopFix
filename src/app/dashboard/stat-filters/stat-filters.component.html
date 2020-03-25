@@ -1,3 +1,9 @@
-<p>
-stat-filters works!
-</p>
+<form [formGroup]="filtersForm">
+
+<label *ngFor="let r of regions" >
+  <input name="region" type="radio" [value]="r" formControlName="region"> {{ r }}
+</label>
+</form>
+
+
+<pre>{{ filtersForm.value | json}}</pre>

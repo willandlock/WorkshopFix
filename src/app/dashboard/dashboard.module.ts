@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { VideoDashboardComponent } from './video-dashboard/video-dashboard.component';
 import { StatFiltersComponent } from './stat-filters/stat-filters.component';
@@ -10,6 +11,7 @@ import { VideoPreviewComponent } from './video-preview/video-preview.component';
 import { VideoLoaderService } from './video-loader.service';
 
 
+
 const routes: Routes = [
   { path: '', component: VideoDashboardComponent }
 ]
@@ -17,7 +19,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ReactiveFormsModule
   ],
   declarations: [StatFiltersComponent, VideoDashboardComponent, VideoListComponent, VideoPlayerComponent, VideoPreviewComponent],
   providers: [VideoLoaderService]

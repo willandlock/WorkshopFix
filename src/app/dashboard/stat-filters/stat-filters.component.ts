@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-stat-filters',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stat-filters.component.css']
 })
 export class StatFiltersComponent implements OnInit {
+  filtersForm: FormGroup;
 
-  constructor() { }
+  regions = ['North America', 'Europe', 'Asia', 'All'];
+
+  constructor(fb: FormBuilder) { 
+    this.filtersForm = fb.group({
+      region: ['All', Validators.required]
+    });
+  }
 
   ngOnInit() {
   }
