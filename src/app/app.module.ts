@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -11,7 +12,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports:      [ BrowserModule,   RouterModule.forRoot(routes)],
+  imports:      [ BrowserModule,   HttpClientModule, RouterModule.forRoot(routes)],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
